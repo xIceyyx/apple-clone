@@ -1,0 +1,31 @@
+.nav-open-animation {
+  animation: nav-open 0.25s ease-in;
+}
+
+.nav-close-animation {
+  animation: nav-close 1s ease-in;
+}
+
+@keyframes nav-open {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes nav-close {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
