@@ -23,7 +23,7 @@ const SecondCard = (props: Props) => {
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    transform: scale(1.525) translateY(-60px);
+    transform: scale(1.9) translateY(-33px);
     position: relative;
     z-index: -10;
   `;
@@ -44,7 +44,7 @@ const SecondCard = (props: Props) => {
 
         <div className="button-wrapper">
           {props.buttonTwoActive && (
-            <button>
+            <button style={{ marginLeft: "35px" }}>
               {props.buttonTwo} <ChevronRightIcon className="btn-icon" />
             </button>
           )}
@@ -103,10 +103,6 @@ const Wrapper = styled.div`
     align-items: center;
     margin-top: 15px;
 
-    &:not(:first-child) {
-      margin-left: 35px;
-    }
-
     button {
       background-color: transparent;
       border: none;
@@ -132,6 +128,12 @@ const Wrapper = styled.div`
       font-size: 19px;
 
       max-width: 309px;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .heading {
+      padding: 0;
     }
   }
 `;

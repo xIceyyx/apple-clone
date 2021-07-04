@@ -141,9 +141,11 @@ const SecondCardGrid = styled.section`
   padding: 0 10px;
   margin-bottom: 10px;
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 810px) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+    padding-right: 0;
+    padding-left: 0;
   }
 `;
 
