@@ -40,7 +40,7 @@ const MainCard = (props: Props) => {
     bottom: 0px;
     top: auto;
 
-    transform: translatex(-50%);
+    transform: translatex(-50%) scale(1.15) translateY(-2.5%);
   `;
 
   return (
@@ -86,7 +86,8 @@ const MainCard = (props: Props) => {
 
 export default MainCard;
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
+  overflow: hidden;
   padding-top: 94px;
   height: 628px;
   width: 100vw;
