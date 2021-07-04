@@ -133,12 +133,13 @@ const Grid = styled.section`
 
 const SecondCardGrid = styled.section`
   display: grid;
+  max-width: 2560px;
 
   grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 10px;
   margin-top: 10px;
-  padding: 0 10px;
   margin-bottom: 10px;
 
   @media only screen and (max-width: 810px) {

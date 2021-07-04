@@ -19,6 +19,7 @@ interface Props {
 const SecondCard = (props: Props) => {
   const Background = styled.div`
     background-image: url(${props.backgroundImg});
+
     height: 100%;
     width: 100%;
     background-position: center center;
@@ -62,6 +63,7 @@ const Wrapper = styled.div`
   height: 100%;
   overflow: hidden;
   height: 580px;
+ 
 
   display: flex;
   flex-direction: column;

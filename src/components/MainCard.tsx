@@ -25,9 +25,10 @@ interface Props {
 const MainCard = (props: Props) => {
   const Background = styled.div`
     background-image: url(${props.backgroundImg});
-    width: 3010px;
+    width: 2560px;
+    max-width: 2560px;
     height: 624px;
-    background-size: 3010px 624px;
+    background-size: 2560px 624px;
     background-repeat: no-repeat;
 
     z-index: -1;
@@ -39,7 +40,7 @@ const MainCard = (props: Props) => {
     right: auto;
     bottom: 0px;
     top: auto;
-
+    overflow: hidden;
     transform: translatex(-50%) scale(1.15) translateY(-2.5%);
   `;
 
@@ -91,6 +92,8 @@ const Wrapper = styled.div`
   padding-top: 94px;
   height: 628px;
   width: 100vw;
+  max-width: 2560px;
+  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
