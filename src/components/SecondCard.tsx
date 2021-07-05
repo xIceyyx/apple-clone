@@ -14,6 +14,7 @@ interface Props {
   buttonTwo: string;
 
   backgroundImg: string;
+  mobileBackGroundImg: string;
 }
 
 const SecondCard = (props: Props) => {
@@ -36,6 +37,26 @@ const SecondCard = (props: Props) => {
     background-size: 1262px 580px;
     background-repeat: no-repeat;
     z-index: -1;
+
+    @media only screen and (max-width: 810px) {
+      transform: translateX(-50%) scale(1) translateY(1.75%);
+      background-image: url(${props.mobileBackGroundImg});
+      width: 736px;
+      height: 548px;
+      background-size: 736px 548px;
+      background-repeat: no-repeat;
+      z-index: 1;
+      position: absolute;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      left: calc(50% + 0px);
+      right: auto;
+      bottom: 0px;
+      top: auto;
+      -webkit-transform: translatex(-50%);
+      z-index: -1;
+    }
   `;
 
   return (
@@ -72,7 +93,6 @@ const Wrapper = styled.div`
   height: 100%;
   overflow: hidden;
   height: 580px;
-
 
   display: flex;
   flex-direction: column;
@@ -147,6 +167,13 @@ const Wrapper = styled.div`
   @media only screen and (max-width: 900px) {
     .heading {
       padding: 0;
+    }
+  }
+
+  @media only screen and (max-width: 810px) {
+    height: 540px;
+    .heading {
+      width: 300px;
     }
   }
 `;

@@ -16,6 +16,7 @@ interface Props {
   buttonTwo: string;
 
   backgroundImg: string;
+  mobileBackGroundImg: string;
 
   textColor: string;
 
@@ -25,10 +26,9 @@ interface Props {
 const MainCard = (props: Props) => {
   const Background = styled.div`
     background-image: url(${props.backgroundImg});
-    width: 2560px;
-    max-width: 2560px;
+    width: 2975px;
     height: 624px;
-    background-size: 2560px 624px;
+    background-size: 2975px 624px;
     background-repeat: no-repeat;
 
     z-index: -1;
@@ -41,10 +41,15 @@ const MainCard = (props: Props) => {
     bottom: 0px;
     top: auto;
     overflow: hidden;
-    transform: translatex(-50%) scale(1.15) translateY(-2.5%);
+    transform: translateX(-50%) scale(1.15) translateY(-2.5%);
 
-    @media only screen and (max-width: 810px) {
-      transform: translatex(-50%) scale(1.15) translateY(-4.5%);
+    @media only screen and (max-width: 735px) {
+      transform: translateX(-50%) scale(1) translateY(1.75%);
+      background-image: url(${props.mobileBackGroundImg});
+      width: 734px;
+      height: 548px;
+      background-size: 734px 548px;
+      z-index: -1;
     }
   `;
 
@@ -169,6 +174,10 @@ const Wrapper = styled.div`
     margin-top: 15px;
   }
 
+  @media only screen and (max-width: 735px) {
+    height: 540px;
+  }
+
   @media only screen and (max-width: 600px) {
     .heading {
       font-size: 32px;
@@ -176,13 +185,24 @@ const Wrapper = styled.div`
 
     .info {
       font-size: 19px;
+      margin-top: 5px;
     }
 
     .pricing {
       font-size: 14px;
       width: 190px;
       &:last-child {
-        margin-top: 10px;
+        margin-top: 5px;
+      }
+
+      &-wrapper {
+        margin-top: 5px;
+      }
+    }
+
+    .button-wrapper {
+      button {
+        font-size: 17px;
       }
     }
   }

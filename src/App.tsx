@@ -21,6 +21,7 @@ function App() {
           textColor={"black"}
           showPricing={true}
           paddingTop={"94px"}
+          mobileBackGroundImg={"/images/main-mobile-img-1.jpg"}
         />
 
         <MainCard
@@ -35,6 +36,7 @@ function App() {
           textColor={"white"}
           showPricing={true}
           paddingTop={"64px"}
+          mobileBackGroundImg={"/images/main-mobile-img-2.jpg"}
         />
 
         <MainCard
@@ -49,6 +51,7 @@ function App() {
           textColor={"white"}
           showPricing={false}
           paddingTop={"64px"}
+          mobileBackGroundImg={"/images/main-mobile-img-3.jpg"}
         />
       </Grid>
 
@@ -62,6 +65,7 @@ function App() {
           buttonOne={"Learn more"}
           buttonTwo={"Buy"}
           backgroundImg={"/images/secondary-img-1.jpg"}
+          mobileBackGroundImg={"/images/secondary-mobile-img-1.jpg"}
         />
         <SecondCard
           heading={"International Collection"}
@@ -72,6 +76,7 @@ function App() {
           buttonOne={"Shop the collection"}
           buttonTwo={""}
           backgroundImg={"/images/secondary-img-2.jpg"}
+          mobileBackGroundImg={"/images/secondary-mobile-img-2.jpg"}
         />
         <SecondCard
           heading={"Buy a Mac or iPad for college. Get AirPods."}
@@ -82,6 +87,7 @@ function App() {
           buttonOne={"Save with education pricing"}
           buttonTwo={""}
           backgroundImg={"/images/secondary-img-3.jpg"}
+          mobileBackGroundImg={"/images/secondary-mobile-img-3.jpg"}
         />
         <SecondCard
           heading={"Back to Class"}
@@ -92,6 +98,7 @@ function App() {
           buttonOne={"Watch the film"}
           buttonTwo={"Learn more"}
           backgroundImg={"/images/secondary-img-4.jpg"}
+          mobileBackGroundImg={"/images/secondary-mobile-img-4.jpg"}
         />
         <SecondCard
           heading={"Card"}
@@ -102,6 +109,7 @@ function App() {
           buttonOne={"Learn more"}
           buttonTwo={"Apply now"}
           backgroundImg={"/images/secondary-img-5.jpg"}
+          mobileBackGroundImg={"/images/secondary-mobile-img-5.jpg"}
         />
         <SecondCard
           heading={"Who are you, Charlie Brown?"}
@@ -114,6 +122,7 @@ function App() {
           buttonOne={"Watch now"}
           buttonTwo={""}
           backgroundImg={"/images/secondary-img-6.jpg"}
+          mobileBackGroundImg={"/images/secondary-mobile-img-6.jpg"}
         />
       </SecondCardGrid>
     </div>
@@ -129,6 +138,10 @@ const Grid = styled.section`
   padding-top: 44px;
   overflow: hidden;
   gap: 10px;
+
+  @media only screen and (max-width: 735px) {
+    grid-template-rows: repeat(3, 540px);
+  }
 `;
 
 const SecondCardGrid = styled.section`
@@ -144,7 +157,7 @@ const SecondCardGrid = styled.section`
 
   @media only screen and (max-width: 810px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 540px);
     padding: 10px 0;
   }
 `;

@@ -169,7 +169,7 @@ const MobileNavMenu = styled.nav`
   overflow-y: scroll;
   overflow-x: hidden;
   // animation: nav-open 0.25s ease-in;
-  transition: all 0.25s ease-in;
+  transition: all 0.5s ease-in;
   .nav {
     height: 44px;
     min-height: 44px;
