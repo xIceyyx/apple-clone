@@ -42,6 +42,10 @@ const MainCard = (props: Props) => {
     top: auto;
     overflow: hidden;
     transform: translatex(-50%) scale(1.15) translateY(-2.5%);
+
+    @media only screen and (max-width: 810px) {
+      transform: translatex(-50%) scale(1.15) translateY(-4.5%);
+    }
   `;
 
   return (

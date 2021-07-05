@@ -20,13 +20,22 @@ const SecondCard = (props: Props) => {
   const Background = styled.div`
     background-image: url(${props.backgroundImg});
 
-    height: 100%;
-    width: 100%;
-    background-position: center center;
+    z-index: 1;
+    position: absolute;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    left: calc(50% + 0px);
+    right: auto;
+    bottom: 0px;
+    top: auto;
+    transform: translatex(-50%);
+
+    width: 1262px;
+    height: 580px;
+    background-size: 1262px 580px;
     background-repeat: no-repeat;
-    transform: scale(1.9) translateY(-33px);
-    position: relative;
-    z-index: -10;
+    z-index: -1;
   `;
 
   return (
@@ -63,11 +72,13 @@ const Wrapper = styled.div`
   height: 100%;
   overflow: hidden;
   height: 580px;
- 
+
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
 
   .heading {
     font-size: 40px;
