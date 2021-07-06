@@ -409,6 +409,17 @@ const LinksGrid = styled.div`
 
   div {
     margin: 0;
+
+    ul {
+      li {
+        &:not(:first-child) {
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 
   ul {
@@ -464,13 +475,17 @@ const Copyright = styled.div`
     ul {
       display: flex;
 
-      justify-content: space-evenly;
+      //  justify-content: space-evenly;
       li {
         list-style-type: none;
 
         &:not(:last-child) {
           padding-right: 15px;
           border-right: 1px solid #d2d2d7;
+        }
+
+        &:not(:first-child) {
+          padding-left: 15px;
         }
 
         &:hover {
@@ -516,10 +531,18 @@ const Copyright = styled.div`
     }
   }
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 550px) {
     .links {
       width: 100%;
       height: 50px;
+
+      ul {
+        li {
+          &:not(:first-child) {
+            padding-left: 0;
+          }
+        }
+      }
     }
 
     ul {
