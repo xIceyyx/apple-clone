@@ -337,7 +337,6 @@ const Wrapper = styled.footer`
   overflow: hidden;
   position: relative;
   z-index: 1;
-  min-height: 100vh;
   @media only screen and (max-width: 1050px) {
     width: 100%;
     min-width: 0;
