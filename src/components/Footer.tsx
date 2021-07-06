@@ -408,9 +408,6 @@ const LinksGrid = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
-
-    --webkit-column-gap: 8px;
-    --webkit-gap: 8px;
   }
   .first {
     margin-top: 0 !important;
@@ -452,7 +449,8 @@ const Copyright = styled.div`
     width: 500px;
     ul {
       display: flex;
-      justify-content: space-evenly;
+      column-gap: 15px;
+      row-gap: 2px;
       li {
         list-style-type: none;
         &:not(:last-child) {
