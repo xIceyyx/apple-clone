@@ -329,10 +329,8 @@ export default Footer;
 const Wrapper = styled.footer`
   width: 100vw;
   background-color: #f5f5f7;
-
   display: flex;
   flex-direction: column;
-
   line-height: 1.33337;
   font-weight: 400;
   min-width: 1024px;
@@ -340,7 +338,6 @@ const Wrapper = styled.footer`
   position: relative;
   z-index: 1;
   min-height: 100vh;
-
   @media only screen and (max-width: 1050px) {
     width: 100%;
     min-width: 0;
@@ -358,11 +355,9 @@ const Info = styled.div`
   color: #86868b;
   border-bottom: 1px solid #d2d2d7;
   height: 100%;
-
   p {
     padding-bottom: 10px;
   }
-
   .wrapper-1 {
     display: flex;
     flex-direction: column;
@@ -373,7 +368,6 @@ const LinksGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
-
   width: 100%;
   margin: 0 auto;
   max-width: 980px;
@@ -384,21 +378,22 @@ const LinksGrid = styled.div`
   color: #86868b;
   height: 100%;
   padding-bottom: 0;
-
   ul {
     li {
       list-style-type: none;
-      &:not(::last-child) {
-        margin-bottom: 10px;
+
+      &:not(:first-child) {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
     }
-
     .title {
       font-size: 12px;
       line-height: 1.33337;
       font-weight: 400;
       letter-spacing: -0.01em;
-
       font-weight: 600;
       margin-right: 20px;
       margin-bottom: 0px;
@@ -406,32 +401,20 @@ const LinksGrid = styled.div`
       color: #1d1d1f;
     }
   }
-
   div {
     margin: 0;
-
-    ul {
-      li {
-        &:not(:first-child) {
-          &:hover {
-            text-decoration: underline;
-            cursor: pointer;
-          }
-        }
-      }
-    }
   }
-
   ul {
     display: flex;
     flex-direction: column;
     gap: 8px;
-  }
 
+    --webkit-column-gap: 8px;
+    --webkit-gap: 8px;
+  }
   .first {
     margin-top: 0 !important;
   }
-
   @media only screen and (max-width: 1050px) {
     display: none;
   }
@@ -439,7 +422,6 @@ const LinksGrid = styled.div`
 
 const Copyright = styled.div`
   padding-top: 34px;
-
   width: 100%;
   margin: 0 auto;
   max-width: 980px;
@@ -450,44 +432,33 @@ const Copyright = styled.div`
   color: #86868b;
   height: 100%;
   padding-bottom: 0;
-
   display: flex;
   flex-direction: column;
   color: #1d1d1f;
   margin-top: 20px;
   margin-bottom: 20px;
-
   .section-1 {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #d2d2d7;
   }
-
   .section-2 {
     width: 100%;
     display: flex;
     justify-content: space-between;
     position: relative;
   }
-
   .links {
     width: 500px;
     ul {
       display: flex;
-
-      //  justify-content: space-evenly;
+      justify-content: space-evenly;
       li {
         list-style-type: none;
-
         &:not(:last-child) {
           padding-right: 15px;
           border-right: 1px solid #d2d2d7;
         }
-
-        &:not(:first-child) {
-          padding-left: 15px;
-        }
-
         &:hover {
           text-decoration: underline;
           cursor: pointer;
@@ -495,7 +466,6 @@ const Copyright = styled.div`
       }
     }
   }
-
   span {
     color: #06c;
     &:hover {
@@ -503,48 +473,33 @@ const Copyright = styled.div`
       text-decoration: underline;
     }
   }
-
   .link-end {
     &:hover {
       text-decoration: underline;
       cursor: pointer;
     }
   }
-
   @media only screen and (max-width: 950px) {
     .section-2 {
       flex-direction: column;
     }
-
     .links {
       width: max-content;
     }
-
     ul {
       display: flex;
       gap: 10px;
       margin-top: 5px;
     }
-
     .link-end {
       display: none;
     }
   }
-
-  @media only screen and (max-width: 550px) {
+  @media only screen and (max-width: 500px) {
     .links {
       width: 100%;
       height: 50px;
-
-      ul {
-        li {
-          &:not(:first-child) {
-            padding-left: 0;
-          }
-        }
-      }
     }
-
     ul {
       flex-wrap: wrap;
       justify-content: left !important;
