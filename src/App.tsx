@@ -3,11 +3,13 @@ import styled from "styled-components";
 import Nav from "./components/Nav";
 import MainCard from "./components/MainCard";
 import SecondCard from "./components/SecondCard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Nav />
+      
       <Grid>
         <MainCard
           spashPopup={true}
@@ -125,6 +127,8 @@ function App() {
           mobileBackGroundImg={"/images/secondary-mobile-img-6.jpg"}
         />
       </SecondCardGrid>
+
+      <Footer/>
     </div>
   );
 }
